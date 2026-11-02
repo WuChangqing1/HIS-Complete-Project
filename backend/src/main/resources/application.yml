@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  forward-headers-strategy: framework
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/his?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${DB_USER:his}
+    password: ${DB_PASSWORD:change-me}
+    hikari:
+      maximum-pool-size: 15
+  flyway:
+    enabled: true
+  jackson:
+    time-zone: Asia/Shanghai
+    serialization:
+      write-dates-as-timestamps: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+his:
+  bootstrap-admin: ${BOOTSTRAP_ADMIN:admin}
+  bootstrap-password: ${BOOTSTRAP_PASSWORD:}
+  data-key: ${DATA_ENCRYPTION_KEY:}
+  demo-mode: ${DEMO_MODE:false}
+  demo-password: ${DEMO_PASSWORD:}

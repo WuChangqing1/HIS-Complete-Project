@@ -1,0 +1,1 @@
+module.exports = { productionSourceMap: false, devServer: { proxy: { '/api': { target: 'http://localhost:8080' }, '/actuator': { target: 'http://localhost:8080' } } } }

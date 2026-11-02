@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.runtime/
+**/target/
+**/node_modules/
+**/dist/
+backend/src/main/resources/static/
+*.log
+*.class
+*.pyc
+**/__pycache__/
+backups/
+.DS_Store
