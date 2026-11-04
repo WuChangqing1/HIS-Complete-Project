@@ -10,6 +10,8 @@ public class ApiController {
  private final AuthService auth; private final HisService service; private final CatalogMapper catalog;
  public ApiController(AuthService a,HisService s,CatalogMapper c){auth=a;service=s;catalog=c;}
  @PostMapping("/auth/login") public Object login(@RequestBody Map<String,Object> p){return auth.login(Values.required(p,"username",64),Values.required(p,"password",256));}
+ @GetMapping("/auth/guest") public Object guestStatus(){return Map.of("enabled",auth.guestEnabled());}
+ @PostMapping("/auth/guest") public Object guest(javax.servlet.http.HttpServletResponse response){response.setHeader("Cache-Control","no-store");return auth.enterGuest();}
  @GetMapping("/auth/me") public Object me(HttpServletRequest r){return auth.me(r);}
  @PostMapping("/auth/logout") public Object logout(HttpServletRequest r){auth.logout(r);return Map.of("ok",true);}
  @GetMapping("/meta") public Object meta(HttpServletRequest r){auth.current(r);return Map.of("departments",catalog.departments(),"levels",catalog.levels(),"settlements",catalog.settlement(),"doctors",service.doctors());}

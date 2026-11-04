@@ -381,5 +381,8 @@
   "正在获取业务提醒…": "Loading reminders…",
   "返回患者列表": "Back to patient list",
   "请求参数格式无效": "Invalid request parameter format",
-  "请求方法不受支持": "Request method not supported"
+  "请求方法不受支持": "Request method not supported",
+  "游客访问": "Continue as guest",
+  "游客": "Guest",
+  "游客访问未开启": "Guest access is disabled"
 }

@@ -189,6 +189,7 @@ $env:DEMO_MODE = if ($settings.ContainsKey('DEMO_MODE')) { $settings['DEMO_MODE'
 $env:DEMO_PASSWORD = $settings['DEMO_PASSWORD']
 $env:DATA_ENCRYPTION_KEY = $settings['DATA_ENCRYPTION_KEY']
 $env:SERVER_PORT = [string]$webPort
+$env:GUEST_ACCESS = if ($settings.ContainsKey('GUEST_ACCESS')) { $settings['GUEST_ACCESS'] } else { 'false' }
 $env:SERVER_ADDRESS = '127.0.0.1'
 $oldJava = Get-RecordedProcess $javaPidPath 'java'
 if ($oldJava) {

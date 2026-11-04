@@ -41,3 +41,5 @@ html[lang=en] .el-button{white-space:normal;line-height:1.4}
 .business-reminders .el-button--text{min-height:32px;padding:4px 0;line-height:1.6}
 
 .audit-time{white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.login-card .guest-entry{margin:12px 0 0}
