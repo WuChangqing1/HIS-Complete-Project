@@ -12,3 +12,23 @@ backend/src/main/resources/static/
 **/__pycache__/
 backups/
 .DS_Store
+
+# Workstation deployment, private handoff documents, and original materials
+/deploy-local.ps1
+/start-local.bat
+/preflight-his.bat
+/windows/preflight.ps1
+/docs/environment/
+/docs/original/
+/docs/deployment/Windows11-环境与部署说明.md
+/frontend/src/i18n/en.txt
+/tests/check_ui_structure.py
+/tests/check_windows_delivery.py
+/tests/补充测试矩阵_335例.xlsx
+/MANIFEST_SHA256.txt
+/HIS系统进度与演示说明.docx
+/Harness缺陷修复复测.md
+/交付校验报告.md
+/服务器部署结果.md
+/本地Java环境与项目运行说明.md
+/本机部署结果.md
